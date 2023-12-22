@@ -1,0 +1,23 @@
+{
+    "name": "anderson/mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\":"app"
+        },
+        "files":[
+            "app/helpers/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Anderson Souza"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "cboden/ratchet": "^0.4.4",
+        "ext-gd": "*",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "scrivo/highlight.php": "v9.18.1.10"
+    }
+}

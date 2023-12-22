@@ -1,0 +1,22 @@
+.btn-main-purple{
+    background-color: var(--main-purple);
+    color:#fff;
+}
+
+.btn-main-purple:hover{
+    background-color: var(--purple-blue);
+}
+
+.btn-purple-dark{
+    background-color: var(--purple-dark);
+    color:#fff;
+}
+
+.btn-purple-dark:hover{
+    background-color: var(--midnight-purple);
+}
+
+.btn-purple-secondary{
+    background-color: var(--purple-secondary);
+    color:#fff;
+}

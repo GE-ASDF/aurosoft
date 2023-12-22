@@ -1,0 +1,91 @@
+alunos_financeiro
+Coluna	Tipo	Nulo	Predefinido	Comentários
+Codigo	int(11)	Não 	 	 
+CodigoAluno	int(11)	Sim 	NULL 	 
+ValorParcela	float	Sim 	0 	 
+DataVencimento	varchar(50)	Não 	 	 
+DataPagamento	varchar(50)	Sim 	NULL 	 
+NrParcela	int(11)	Sim 	1 	 
+ValorPago	float	Não 	0 	 
+Multa	float	Sim 	0 	 
+ValorMulta	float	Sim 	0 	 
+Desconto	float	Sim 	0 	 
+ValorDesconto	float	Sim 	0 	 
+CodigoTipo	int(11)	Sim 	NULL 	 
+Baixada	int(1)	Sim 	0 	 
+CodigoFormaPagamento	int(11)	Sim 	NULL 	 
+CodigoFuncionarioBaixou	varchar(255)	Sim 	NULL 	 
+CodigoFuncionario	varchar(255)	Não 	 	 
+createdAt	datetime	Sim 	NULL 	 
+updatedAt	datetime	Sim 	NULL 	 
+
+caixa
+IdCaixa	int(11)	Não 	 	 
+SaldoInicial	float	Sim 	0 	 
+SaldoFinal	float	Sim 	0 	 
+DataAbertura	datetime	Não 	 	 
+DataFechamento	datetime	Sim 	NULL 	 
+ResponsavelAbertura	varchar(255)	Não 	 	 
+ResponsavelFechamento	varchar(255)	Sim 	NULL 	 
+
+movimentacao_financeira
+
+Coluna	Tipo	Nulo	Predefinido	Ligações para	Comentários
+IdMovimentacao	int(11)	Não 	 	 	 
+IdCaixa	int(11)	Não 	 	caixa -> IdCaixa 	 
+TipoOperacao	varchar(1)	Não 	 	 	 
+CodigoFormaPagamento	int(11)	Não 	 	 	 
+Valor	float	Não 	 	 	 
+DataMovimentacao	datetime	Não 	 	 	 
+Descricao	int(11)	Sim 	NULL 	 	 
+IdAlunoFinanceiro	int(11)	Sim 	NULL 	alunos_financeiro -> Codigo 	 
+Usuario	varchar(255)	Não 	 	 	 
+Índices
+Nome da chave	Tipo	Único	Pacote	Coluna	Quantidade	Agrupamento (Collation)	Nulo	Comentário
+PRIMARY	BTREE	Sim	Não	IdMovimentacao	1	A	Não	
+IdCaixa	BTREE	Não	Não	IdCaixa	1	A	Não	
+IdAlunoFinanceiro	BTREE	Não	Não	IdAlunoFinanceiro	1	A	Sim	
+
+aluno_responsavel
+Coluna	Tipo	Nulo	Predefinido	Comentários
+ID	int(11)	Não 	 	 
+IDRESPONSAVEL	int(11)	Não 	 	 
+IDALUNO	int(11)	Não 	 	 
+Índices
+Nome da chave	Tipo	Único	Pacote	Coluna	Quantidade	Agrupamento (Collation)	Nulo	Comentário
+PRIMARY	BTREE	Sim	Não	ID	3	A	Não	
+
+responsaveis_alunos
+Coluna	Tipo	Nulo	Predefinido	Comentários
+ID	int(11)	Não 	 	 
+NOME	varchar(255)	Não 	 	 
+CPF	varchar(20)	Sim 	NULL 	 
+RG	varchar(20)	Sim 	NULL 	 
+DATA_NASCIMENTO	date	Sim 	NULL 	 
+TELEFONE	varchar(20)	Sim 	NULL 	 
+CELULAR	varchar(20)	Sim 	NULL 	 
+EMAIL	varchar(100)	Sim 	NULL 	 
+ENDERECO	varchar(255)	Sim 	NULL 	 
+CIDADE	int(11)	Sim 	NULL 	 
+ESTADO	int(11)	Sim 	NULL 	 
+Índices
+
+tipo_dado_financeiro
+Coluna	Tipo	Nulo	Predefinido	Comentários
+CodigoTipo	int(11)	Não 	 	 
+DescricaoTipo	varchar(255)	Não 	 	 
+
+auditoria_financeira
+Coluna	Tipo	Nulo	Predefinido	Comentários
+Codigo	int(11)	Não 	 	 
+Valor	float	Não 	 	 
+Operacao	varchar(50)	Não 	 	 
+DataOperacao	datetime	Não 	 	 
+Responsavel	varchar(255)	Não 	 	 
+IdAlunoFinanceiro	int(11)	Sim 	NULL 	 
+
+formas_pagamento
+
+Coluna	Tipo	Nulo	Predefinido	Comentários
+CodigoFormaPagamento	int(11)	Não 	 	 
+DescricaoFormaPagamento	varchar(100)	Não 	 	 

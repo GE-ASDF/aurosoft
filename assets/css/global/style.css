@@ -1,0 +1,22 @@
+html,body{
+    background-color: #232323;
+}
+
+img{
+    object-fit: fill;
+    width:100%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+#container-submenu, .submenu{
+    display: none;
+}
+
+#container-submenu .submenu.active{
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+}

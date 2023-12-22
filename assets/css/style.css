@@ -1,0 +1,166 @@
+/* IMPORTAÇÃO DO CSS GLOBAL */
+@import "./global/style.css";
+
+/* IMPORTAÇÃO DAS VARIÁVEIS DE CORES */
+@import "./colors/style.css";
+
+/* IMPORTAÇÃO DOS ESTILOS DE BOTÕES*/
+@import "./buttons/style.css";
+
+.main-bg-purple{
+    background-color: var(--main-purple);
+    color:#fff;
+}
+
+.purple-dark{
+    background-color: var(--purple-dark);
+    color:#fff;
+}
+
+.purple-secondary{
+    background-color: var(--purple-secondary);
+    color:#fff;
+}
+
+.nav-link:hover{
+    color:#ccc;
+}
+
+#container-submenu{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+#main-content{
+    display: flex;
+    height:100vh;
+    overflow: hidden;
+    background:#171717;
+}
+
+#main-content #side-menu{
+    width:250px;
+    min-width: 250px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background:#171717;
+    box-shadow: 1px 1px 10px 1px #171717;
+}
+
+#menu{
+    height: 100%;
+    overflow-y: hidden;
+    color: #fff;
+}
+
+#footer-side-menu{
+    width:100%;
+    background:linear-gradient(#232323, #404040);
+    padding:10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#footer-side-menu:hover{
+    background:linear-gradient(to top,#232323, #404040);
+    transition: all 0.3s ease;
+}
+
+#header-side-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-side-menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header-content-profile-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    width:100%;
+    height:max-content;
+    padding:10px 36px;
+}
+
+#header-menu-items{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:2px;
+    width: 100%;
+    height:100%;
+    overflow-y: auto;
+}
+.nav-menu-item{
+    display: flex;
+    gap:5px;
+    font-size: 18px;
+    padding:6px 20px;
+    width: 100%;
+    background-color: var(--purple-dark);
+}
+.nav-menu-item.active{
+    background-color: var(--midnight-purple);
+}
+.nav-menu-item, a {
+    color:#fff;
+}
+#img-profile{
+    display: block;
+    background:#ccc;
+    width:100px;
+    min-width: 100px;
+    height:100px;
+}
+#img-profile, img{
+    width:100px;
+    min-width: 100px;
+    height:100px;
+    border-radius:100%;
+}
+
+#header-profile-info-user{
+    display: flex;
+    font-size: 14px;
+    color:#fff;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+#header-profile-info-user a{
+    text-decoration: ;
+}
+
+#main-content-views{
+    display: flex;
+    padding-left:4px;
+    flex-direction: column;
+    padding:10px;
+}
+#main{
+    width: 100%;
+    color:#fff;
+}
+#main-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:5px;
+    width: 100%;
+    flex: 1;
+    padding: 5px 18px;
+    height: 77px;
+    border-bottom:1px solid #ccc;
+}
