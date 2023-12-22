@@ -11,4 +11,7 @@ class Controller{
         include "app/views/{$viewName}".".php";
    }
 
+   protected function setActive(array $strings = []){
+        $this->active = [...$strings];
+   }
 }

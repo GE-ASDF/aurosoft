@@ -45,7 +45,5 @@ class HomeController extends Controller{
         $this->load("template", $data);
     }
 
-    private function setActive(array $strings = []){
-        $this->active = [...$strings];
-    }
+ 
 }
