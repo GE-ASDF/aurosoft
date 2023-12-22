@@ -33,6 +33,13 @@
                         ]); 
                     component("NavMenuItem", 
                     [
+                        'text' => 'Pedagógico', 
+                        'active' => isset($active) && in_array("pedagogico", $active) ? 'active':'', 
+                        'icon' => 'bi-person-video3',
+                        'id' => '#pedagogico',
+                    ]); 
+                    component("NavMenuItem", 
+                    [
                         'text' => 'Financeiro', 
                         'active' => isset($active) && in_array("financeiro", $active) ? 'active':'', 
                         'icon' => 'bi-cash-stack',
@@ -47,10 +54,22 @@
                     <div class="card-body p-0">
                         <div id="administrativo" class="submenu">
                             <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("alunos", $active) ? 'active':'', 'text' => 'Alunos', 'icon' => 'bi-person', 'link' => 'site/aluno']) ?>
-                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("responsaveis", $active) ? 'active':'', 'text' => 'Responsáveis', 'icon' => 'bi-person', 'link' => 'site/responsavel']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("responsaveis", $active) ? 'active':'', 'text' => 'Responsáveis', 'icon' => 'bi-person', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("colaboradores", $active) ? 'active':'', 'text' => 'Colaboradores', 'icon' => 'bi-person-vcard', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("salasaula", $active) ? 'active':'', 'text' => 'Salas de aula', 'icon' => 'bi-person-workspace', 'link' => '']) ?>
                         </div>
                         <div id="financeiro" class="submenu">
-                            <p>Financeiro</p>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("recebimentos", $active) ? 'active':'', 'text' => 'Recebimentos', 'icon' => 'bi-piggy-bank', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("contasreceber", $active) ? 'active':'', 'text' => 'Contas a receber', 'icon' => 'bi-wallet2', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("inadimplentes", $active) ? 'active':'', 'text' => 'Inadimplentes', 'icon' => 'bi-cash', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("caixa", $active) ? 'active':'', 'text' => 'Relatório de caixa', 'icon' => 'bi-file-earmark-spreadsheet', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("movimentacaofinanceira", $active) ? 'active':'', 'text' => 'Moviment. financeira', 'icon' => 'bi-bank', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("auditoria", $active) ? 'active':'', 'text' => 'Auditoria', 'icon' => 'bi-shield-check', 'link' => '']) ?>
+                        </div>
+                        <div id="pedagogico" class="submenu">
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("presencasfaltas", $active) ? 'active':'', 'text' => 'Presenças e faltas', 'icon' => 'bi-person-raised-hand', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("presencasfaltas", $active) ? 'active':'', 'text' => 'Alunos em andamento', 'icon' => 'bi-pc-display', 'link' => '']) ?>
+                            <?php component("LinkNavMenuItem", ['active' => isset($active) && in_array("presencasfaltas", $active) ? 'active':'', 'text' => 'Alunos concluídos', 'icon' => 'bi-check-all', 'link' => '']) ?>
                         </div>
                     </div>
                 </div>

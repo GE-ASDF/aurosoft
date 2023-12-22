@@ -23,11 +23,21 @@ const handleSubmenuOpen = (e)=>{
                             
 }
 
-const handleSubmenuclose = (e)=>{
-    e.preventDefault();
+const handleSubmenuclose = (e = '')=>{
+    if(e){
+        e.preventDefault();
+    }
     containerSubmenu.style.display = "none";
 }
 
+const handleClickOutsideOfContainerMenu = (e)=>{
+    if(!e.target.classList.contains("nav-menu-item")){
+        if(e.target.closest("#container-submenu") == null){
+            handleSubmenuclose();
+        }
+    }
+}
 
+Evento.$el("#main-content").click(handleClickOutsideOfContainerMenu);
 Evento.$el("#btn-close-submenu-container").click(handleSubmenuclose)
 Evento.$el(".nav-menu-item.nav-submenu-item").click(handleSubmenuOpen);
