@@ -9,18 +9,7 @@ use app\core\Model;
 class HomeController extends Controller{
 
     public function index(){   
-        $this->setActive(['dashboard']);
-
-        $data = [
-            "pageTitle" => "Página inicial", 
-            "view" => "Index",
-        ];
-        $this->load("template", $data);
-    }
-
-    public function edit($id){       
-        echo $id;
-        die;
+        backToPage("login");
     }
     
 }

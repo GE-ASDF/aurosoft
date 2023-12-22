@@ -147,6 +147,12 @@ function deepPoint(string $stringWithPoint){
     return implode("/", explode(".", $stringWithPoint));
 }
 
+use app\services\SecurityService;
+function _csrf(){
+    $_csrf = new SecurityService();
+    return $_csrf->insertHiddenToken();
+}
+
 /**
  * Função que aponta para a pasta assets e carrega os arquivos necessários informados pelo usuário
  * @param string $file - caminho até o arquivo

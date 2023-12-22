@@ -12,5 +12,5 @@ class HomeController extends Controller{
         ];
         $this->load("template", $data);
     }
-    
+
 }
